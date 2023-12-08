@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import './style.css';
-import { buildQueries } from "@testing-library/react";
+
 
 export const MyCoolButton = props => {
 
-  const clickHandler = () => alert("Таны коммент: " + props.comment);
+  const [commentHistory, setCommentHistory] = useState([]); // [
+  const [count, setCount] = useState(0);
 
+  const clickHandler = () => {
+    setCount(count + 1);
+    setCommentHistory([...commentHistory, props.comment]);
+  }
   //css.color = "blue";
 
   return (
@@ -16,8 +21,15 @@ export const MyCoolButton = props => {
         className='MyButton'
         type='button'
         onClick={clickHandler}
-        value={props.text ? props.text : "Click!"}
+        value={props.text ? `${count}) ${props.text} ` : "Click!"}
       />
+
+      <div>
+        {commentHistory.map(el =>
+        (<div>{el}</div>
+        ))}
+      </div>
+
     </div>
   );
 };
