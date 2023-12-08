@@ -6,9 +6,11 @@ export const MyCoolButton = props => {
 
   const clickHandler = () => alert("Таны коммент: " + props.comment);
 
+  //css.color = "blue";
+
   return (
     <div>
-      <span className="coolText">
+      <span style={css}>
         {props.tovchNer ? props.tovchNer : "Defualt props"}</span> <br />
       <input
         className='MyButton'
@@ -21,6 +23,5 @@ export const MyCoolButton = props => {
 };
 
 const css = {
-  backgroundColor: "gray",
-  color: "blue"
+  color: "red",
 };
