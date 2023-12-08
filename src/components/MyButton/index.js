@@ -1,5 +1,6 @@
 import React from "react";
-
+import './style.css';
+import { buildQueries } from "@testing-library/react";
 
 export const MyCoolButton = props => {
 
@@ -7,7 +8,8 @@ export const MyCoolButton = props => {
 
   return (
     <div>
-      <span>{props.tovchNer ? props.tovchNer : "Defualt props"}</span> <br />
+      <span className="coolText">
+        {props.tovchNer ? props.tovchNer : "Defualt props"}</span> <br />
       <input
         className='MyButton'
         type='button'
@@ -16,4 +18,9 @@ export const MyCoolButton = props => {
       />
     </div>
   );
+};
+
+const css = {
+  backgroundColor: "gray",
+  color: "blue"
 };

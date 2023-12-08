@@ -1,8 +1,8 @@
 import logo from './logo.svg';
-import './App.css';
+import "./style.css";
 
-import { MyCoolButton } from "./components/MyButton";
-import { Comment } from "./components/Comment";
+import { MyCoolButton } from "../MyButton";
+import { Comment } from "../Comment";
 
 function App() {
   return (
