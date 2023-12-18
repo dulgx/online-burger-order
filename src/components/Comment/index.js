@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import { MyCoolButton } from "../MyButton";
+import "./style.css";
+
+
 
 export class Comment extends Component {
     constructor() {
@@ -17,13 +20,18 @@ export class Comment extends Component {
 
     render() {
         return (
-            <div>
+            <div className="CommentContainer">
                 <div className="coolText">{this.state.comment}</div>
                 <div>Зохиогч: {this.props.zohiogch}</div>
                 <textarea onChange={this.bichih}></textarea>
                 <MyCoolButton
                     comment={this.state.comment}
                     tovchNer="Коммент"
+                    text="Хадгал"
+                />
+                <MyCoolButton
+                    comment={this.state.comment}
+                    tovchNer="Коммент бичих 2"
                     text="Хадгал"
                 />
             </div>

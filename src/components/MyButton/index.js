@@ -14,7 +14,7 @@ export const MyCoolButton = props => {
   //css.color = "blue";
 
   return (
-    <div>
+    <div className="CoolButtonContainer">
       <span style={css}>
         {props.tovchNer ? props.tovchNer : "Defualt props"}</span> <br />
       <input
